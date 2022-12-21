@@ -1,0 +1,30 @@
+{
+  "definitions": {
+    "Bullets": {
+      "title": "Bullets Group",
+      "type": "array",
+      "items": {
+        "properties": {
+          "image": {
+            "$ref": "app:vtex.native-types#/definitions/url",
+            "default": "",
+            "title": "Image",
+            "widget": {
+              "ui:widget": "image-uploader"
+            }
+          },
+          "titleBullet": {
+            "title": "Title Bullet",
+            "$ref": "app:vtex.native-types#/definitions/text",
+            "default": ""
+          },
+          "link": {
+            "title": "Link Bullet",
+            "$ref": "app:vtex.native-types#/definitions/link",
+            "default": ""
+          }
+        }
+      }
+    }
+  }
+}
