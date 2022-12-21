@@ -152,5 +152,17 @@ Si el proceso se ejecuta sin ningún error, se mostrará el siguiente mensaje: `
 
 Esto le permitirá ver los cambios aplicados en tiempo real, a través de la cuenta y el espacio de trabajo en el que está trabajando.
 
+## Customization
+
+Para personalizar el componente, utilizar los css handles.
+
+| CSS Handles      |
+| ---------------- |
+| `bullet__group`         |
+| `bullet__item`          |
+| `bullet__item--link`    |
+| `bullet__item--image`   |
+| `bullet__item--title`   |
+
 ## Contributors
 1. Jonathan Laguado  
