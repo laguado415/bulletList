@@ -1,0 +1,32 @@
+.bullet__group {
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: center;
+}
+
+.bullet__item {
+  width     : 80%;
+  margin    : 0 15px;
+  text-align: center;
+}
+
+.bullet__item--title {
+  font-size  : 20px;
+  font-weight: bold;
+  color      : #000;
+  margin     : 5px auto;
+}
+
+.bullet__item--link {
+  text-decoration: none;
+}
+
+.bullet__item--image {
+  width: 100%;
+}
+
+@media (min-width: 640px) and (max-width: 1025px) {
+  .bullet__item {
+    width: 40%;
+  }
+}
