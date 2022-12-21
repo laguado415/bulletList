@@ -5,6 +5,7 @@
   "title": "bullets",
   "description": "context list bullets",
   "builders": {
+    "assets": "0.x",
     "react": "3.x",
     "messages": "1.x",
     "docs": "0.x",
