@@ -4,9 +4,7 @@ Componente bullet list, responsable de crear una lista la cuál cambia de estilo
 
 <div align="center">
 
-<video width="320" height="240" autoplay loop>
- <source src="movie.mp4" type="video/mp4">
-</video>
+<img height="280" src="https://raw.githubusercontent.com/laguado415/itgloberspartnercl-bulletList/master/assets/img/Group%203.png"/>
 
 </div>
   
@@ -18,24 +16,75 @@ Para la configuracion se usara los valores por defecto como nombres de component
 
 ```json
    "dependencies": {
-    "{vendor}.whatsapp-button": "0.x"
+    "{vendor}.bullets-diagramation": "0.x"
   }
 ```
-######  2 - Agregue el WhatsApp Button component a la página que deseé que renderice este componente.
+######  2 - Agregue el list-content.bullets-group component a la página que deseé que renderice este componente, addicionalmente como children declarar un componente               slider-layout.
+ ```json
+   "list-context.bullets-group": {
+    "title": "my list bullet",
+    "children": ["slider-layout#bullet-list"],
+    "props": {
+      "bullets": [
+        {
+          "image": "/arquivos/image-1-banner-regalos.png",
+          "titleBullet": "Title",
+          "link": {
+            "url": "/"
+          }
+        },
+        {
+          "image": "/arquivos/image-2-banner-regalos.png",
+          "titleBullet": "Title 2",
+          "link": {
+            "url": "/"
+          }
+        },
+        {
+          "image": "/arquivos/image-3-banner-regalos.png",
+          "titleBullet": "Title 3",
+          "link": {
+            "url": "/"
+          }
+        }
+      ],
+      "blockClass": "bullet-list"
+    }
+  },
+  "slider-layout#bullet-list": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1
+      },
+      "infinite": true,
+      "showPaginationDots": false,
+      "blockClass": "bullet-list"
+    }
+  }
+```
 
-######  3 - Configuré las props principalmente las propiedades logo, phone, message.
+######  3 - Configuré las props.
 
 ## Props:
 
 | Prop name      | Type     | Description                                          | Default value |
 | -------------- | -------- | ---------------------------------------------------- | ------------- |
-| `logo`     | `String` | Imagen del logo   |  `N/A` |
-| `phone`    | `string` | Numero telefonico de la tienda |   `N/A`     |
-| `message`  | `string` | Mensaje por defectos que recibira en WhatsApp  | `hola` |
-| `width`  | `number` |  Width a imagen  |  `80`  |
-| `height`   | `number` |  Height a image | `80` |           |
-| `background` | `string` |  Backgroud del div contenedor solo se aceptan nombres de colores simples como yellow o blue, dark-green u otras variantes no son aceptadas |  `N/A` |
-| `radio`    | `number` `string` |  Background-radio los valores permitidos son: `100` o `pill` |  `N/A` |
+| `bullets`     | `Array` | Array de imagenes   |  `[]` |
+
+
+### Bullets Props:
+
+| Prop name      | Type     | Description                                          | Default value |
+| -------------- | -------- | ---------------------------------------------------- | ------------- |
+| `image`     | `String` | Url de imagen  |  `N/A` |
+| `titleBullet`  | `String` | Titulo de bullet  |  `N/A` |
+| `link`     | `object` | Recibe las propiedades del link |  `{}` |
+
+### link Props:
+
+| Prop name      | Type     | Description                                          | Default value |
+| -------------- | -------- | ---------------------------------------------------- | ------------- |
+| `url`     | `String` | Hipervinculo a otra pagina |  `N/A` |
 
 ## Configuración repositorio 
 ### Paso 1 - Clonación del repositorio
